@@ -1,0 +1,15 @@
+version: '3'
+services:
+  webapp:
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./database:/app/database
+    environment:
+      MONGO_URL: "mongodb://database:27017/webapp"
+    depends_on:
+      - database
+
+  database:
+    image: mongo
