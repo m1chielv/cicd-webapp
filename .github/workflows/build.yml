@@ -40,4 +40,4 @@ jobs:
 
           tags: m1chiel/webapp:latest
 
-        run: docker push m1chiel:webapp
+      run: docker push m1chiel:webapp
